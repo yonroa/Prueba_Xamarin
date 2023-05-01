@@ -12,8 +12,8 @@
                 <DataTemplate>
                     <ViewCell>
                         <ViewCell.ContextActions>
-                            <MenuItem x:Name="BtnDelete" Text="Eliminar" IsDestructive="True" Clicked="BtnDelete_Clicked" CommandParameter="{Binding .}">
-                            </MenuItem>
+                            <MenuItem x:Name="BtnDelete" Text="Eliminar" IsDestructive="True" Clicked="BtnDelete_Clicked" CommandParameter="{Binding .}" />
+                            <MenuItem x:Name="BtnEditar" Text="Editar" Clicked="BtnEditar_Clicked" CommandParameter="{Binding .}" />
                         </ViewCell.ContextActions>
                         <StackLayout Padding="30, 0">
                             <Label Text="{Binding Name}" TextColor="{StaticResource colorPrimary}" FontSize="Medium"></Label>

@@ -2,20 +2,21 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="APP.Views.addPage"
-             Title="Agregar Usuario">
+             Title="Agregar Usuario"
+             x:Name="Titulo">
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Guardar" Clicked="ToolbarItem_Clicked"/>
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout Padding="20">
             <Label Text="Nombre" FontSize="Medium" FontAttributes="Bold" TextColor="{StaticResource colorPrimaryDark}"></Label>
-            <Entry x:Name="nombre"></Entry>
+            <Entry x:Name="nombre" Text="{Binding Path=Name}"></Entry>
             <Label Text="Apellido" FontSize="Medium" FontAttributes="Bold" TextColor="{StaticResource colorPrimaryDark}"></Label>
-            <Entry x:Name="apellido"></Entry>
+            <Entry x:Name="apellido" Text="{Binding Path=LastName}"></Entry>
             <Label Text="Telefono" FontSize="Medium" FontAttributes="Bold" TextColor="{StaticResource colorPrimaryDark}"></Label>
-            <Entry x:Name="telefono"></Entry>
+            <Entry x:Name="telefono" Text="{Binding Path=Phone}"></Entry>
             <Label Text="Correo" FontSize="Medium" FontAttributes="Bold" TextColor="{StaticResource colorPrimaryDark}"></Label>
-            <Entry x:Name="correo"></Entry>
+            <Entry x:Name="correo" Text="{Binding Path=Email}"></Entry>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
