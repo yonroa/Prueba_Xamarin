@@ -48,5 +48,11 @@ namespace APP.Views
                 }
             }
         }
+
+        private async void BtnEditar_Clicked(object sender, EventArgs e)
+        {
+            var item = (UsuarioItem)(sender as MenuItem).CommandParameter;
+            await Navigation.PushAsync (new addPage(false){ BindingContext = item });
+        }
     }
 }

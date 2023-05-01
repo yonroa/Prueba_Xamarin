@@ -14,23 +14,37 @@ namespace APP.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class addPage : ContentPage
     {
-        public addPage()
+        bool isNewUser;
+        public addPage(bool isNew = true)
         {
             InitializeComponent();
+            if (!isNew)
+            {
+                Titulo.Title = "Editar Usuario";
+            }
+            isNewUser = isNew;
         }
 
         private async void ToolbarItem_Clicked(object sender, EventArgs e)
         {
+            int result;
             try
             {
-                var item = new UsuarioItem
+                if (isNewUser)
                 {
-                    Name = nombre.Text,
-                    LastName = apellido.Text,
-                    Phone = telefono.Text,
-                    Email = correo.Text
-                };
-                var result = await App.UsuarioManager.InsertUserAsync(item);
+                    var item = new UsuarioItem
+                    {
+                        Name = nombre.Text,
+                        LastName = apellido.Text,
+                        Phone = telefono.Text,
+                        Email = correo.Text
+                    };
+                    result = await App.UsuarioManager.InsertUserAsync(item);
+                } else
+                {
+                    var item = (UsuarioItem)BindingContext;
+                    result = await App.UsuarioManager.UpdateUserAsync(item);
+                }
                 if (result == 1)
                 {
                     await Navigation.PopAsync();
