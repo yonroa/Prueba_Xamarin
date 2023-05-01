@@ -1,5 +1,5 @@
 # Prueba_Xamarin
-En este repositorio se encuantra el desarrollo de una APIRestFul. El backend fue desarrollado con APS.NET Core y el frontend fue desarrollado con Xamarin.Forms, dirigido para dispositivos moviles Android.
+En este repositorio se encuantra el desarrollo de una APIRestFul. El backend fue desarrollado con APS.NET Core y se uso MySQL como base de datos. El frontend fue desarrollado con Xamarin.Forms, dirigido para dispositivos moviles Android.
 
 Funciones de la app:
 - Lista de los usuarios registrados
@@ -7,6 +7,6 @@ Funciones de la app:
 
 ADVERTENCIA: Esta APP esta desarrollada para funcionar en un entorno de desarrollo local, la conexion a la API ha sido modificada para ignorar certificados SSL.
 
-[https://postimg.cc/F77n6179](https://i.postimg.cc/yYP4kZKS/ListView.png)
+![Screenshot ListView](screenshots/EditView.png "ListView ScreenShot")
 
-![screenshot edit](https://postimg.cc/ZvRZ2Zy1)
+![screenshot EditView](screenshots/ListView.png "EditView ScreenShot")
