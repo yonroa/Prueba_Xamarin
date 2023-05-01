@@ -7,6 +7,6 @@ Funciones de la app:
 
 ADVERTENCIA: Esta APP esta desarrollada para funcionar en un entorno de desarrollo local, la conexion a la API ha sido modificada para ignorar certificados SSL.
 
-[screenshot view](https://postimg.cc/F77n6179)
+[https://postimg.cc/F77n6179](https://i.postimg.cc/yYP4kZKS/ListView.png)
 
 ![screenshot edit](https://postimg.cc/ZvRZ2Zy1)
