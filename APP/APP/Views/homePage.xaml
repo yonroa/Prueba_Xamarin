@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="APP.Views.homePage"
+             Title="APP">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Agregar" Clicked="ToolbarItem_Clicked" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <ListView x:Name="lista_usuarios" HasUnevenRows="True">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.ContextActions>
+                            <MenuItem x:Name="BtnDelete" Text="Eliminar" IsDestructive="True" Clicked="BtnDelete_Clicked" CommandParameter="{Binding .}">
+                            </MenuItem>
+                        </ViewCell.ContextActions>
+                        <StackLayout Padding="30, 0">
+                            <Label Text="{Binding Name}" TextColor="{StaticResource colorPrimary}" FontSize="Medium"></Label>
+                            <Label Text="{Binding LastName}"></Label>
+                            <Label Text="{Binding Phone}"></Label>
+                            <Label Text="{Binding Email}"></Label>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>
